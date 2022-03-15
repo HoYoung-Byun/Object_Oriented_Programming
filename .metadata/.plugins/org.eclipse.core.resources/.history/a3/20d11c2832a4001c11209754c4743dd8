@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Week_2 {
+
+	public static void main(String[] args) {
+		
+		// 02_1. Money
+		
+		Scanner scan = new Scanner(System.in) ;
+		
+		int money = scan.nextInt();
+		
+		System.out.println(11000/10000);
+		
+		scan.close();
+		
+	}
+
+}
