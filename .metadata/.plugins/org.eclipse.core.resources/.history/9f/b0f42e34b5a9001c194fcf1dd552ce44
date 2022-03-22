@@ -1,0 +1,45 @@
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Week_3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// 03_1. reverse
+		/*
+		Scanner scan = new Scanner (System.in) ;
+		
+		int num = scan.nextInt();
+		String numString = Integer.toString(num) ;
+		
+		int i ;
+		for(i = 0; i < numString.length() ;  i++) {
+			
+			char letter = numString.charAt(numString.length()-i-1) ;
+			System.out.print(letter);
+			
+		}
+		
+		scan.close();
+		*/
+
+		
+		
+		// 03_2. Counting A
+		
+		Scanner scan = new Scanner (System.in) ;
+		
+		String sentence = scan.nextLine() ;
+		
+		int i , numOfa;
+		
+		char a = 'a';
+		char b = 'b';
+		
+		System.out.println(a == b);
+//		for(i = 0; i < sentence.length(); i++ ) {
+//			if sentence.charAt(i)
+//		}
+	}
+}

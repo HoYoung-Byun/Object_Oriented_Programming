@@ -1,0 +1,28 @@
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Week_3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner (System.in) ;
+		
+		int num = scan.nextInt();
+		
+		String numString = Integer.toString(num) ;
+		
+		// System.out.println(numString.length()); //5
+		
+		for(i = 0; i < numString.length() ;  i++) {
+			
+			char letter = numString[numString.length()-i]
+			System.out.println(letter);
+			
+		}
+		
+		scan.close();
+
+	}
+
+}
