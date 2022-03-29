@@ -51,7 +51,7 @@ public class Week_3 {
 		
 		
 		
-		// 03_2. Rectangle System
+		// 03_3. Rectangle System
 		
 		Scanner scan = new Scanner (System.in) ;
 		
