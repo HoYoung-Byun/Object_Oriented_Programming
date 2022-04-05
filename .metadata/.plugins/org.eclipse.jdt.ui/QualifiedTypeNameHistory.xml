@@ -13,4 +13,6 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="Splitter"/>
     <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+    <fullyQualifiedTypeName name="Service051"/>
+    <fullyQualifiedTypeName name="Process051"/>
 </qualifiedTypeNameHistroy>

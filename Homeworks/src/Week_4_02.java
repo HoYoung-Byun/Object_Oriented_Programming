@@ -37,8 +37,8 @@ class Book42 {
 	public Book42(String title) {
 		
 		this.title = title ;
-		this.numPage = 0 ;
-		this.year = 2000 ;
+		this.numPage = 0 ; // 이것과
+		this.year = 2000 ; //이줄은 this(); 하나로 축약가능 (this()는 다른 생성자를 불러오는 역할)
 		
 	}
 	
