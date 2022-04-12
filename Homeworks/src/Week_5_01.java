@@ -1,3 +1,5 @@
+// 05_1. Static - 난이도 어려움
+
 
 public class Week_5_01 {
 
@@ -49,31 +51,57 @@ class Process051 {
 	
 	public Process051(int id) { this.id = id; }
 	
+	public int getId() { return this.id; }
+	
 	
 }
 
 class Service051 {
 	
-	private int numProcess;
-	private int numAccess;
-	private int turn;
+	private static int numProcess;
+	private static int numAccess;
+	private static int turn;
 	
+	
+	
+	public Service051(int numProcess, int turn){
+		Service051.numProcess = numProcess;
+		Service051.turn = turn;
+	}
 	
 	public Service051 (Process051 p) {
 		
+		Service051.numAccess++ ;
 		
+		if (p.getId() == Service051.turn) {
+			
+			if (p.getId() < (Service051.numProcess - 1)) {
+				Service051.turn++ ;
+			}
+			
+			else if (p.getId() == (Service051.numProcess - 1)) {
+				Service051.turn = 0 ;
+			}
+			
+			System.out.println("process p(" + p.getId() + ") done");
+			
+		}
+		else {
+			System.out.println("invalid turn for process p(" + p.getId() + ")");
+		}
 		
-	}
-	
-	public Service051(int numProcess, int turn){
-		this.numProcess = numProcess;
-		this.turn = turn;
 	}
 	
 	public String toString() {
 		
-		return "[SERVICE] numProcess(" + numProcess + ") numAccess("+ numAccess +") turn(" + turn + ")";
+		return "[SERVICE] numProcess(" + Service051.numProcess + ") numAccess("+ Service051.numAccess +") turn(" + Service051.turn + ")";
 	}
+	
+	public static int getTurn() {
+		
+		return turn;
+	}
+	
 	
 }
 
