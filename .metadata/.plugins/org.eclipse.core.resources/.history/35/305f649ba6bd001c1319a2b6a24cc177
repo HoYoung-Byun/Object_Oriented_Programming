@@ -1,0 +1,174 @@
+// 06_1. Library
+
+public class Week_6_01 {
+
+	public static void main(String[] args) {
+		
+		Library061 lib = new Library061(); 
+		lib.addBook("Korean Dream", "Kim", 2015);
+		lib.addBook("Our Beutiful Goals", "Lee", 2019);
+		lib.addBook("My Precious Things", "Park", 2020);
+		lib.addBook("Go Up to the Mountain", "Cho", 1995);
+		lib.addBook("All We Have Lost in Pandemic", "Han", 1999);
+		lib.addBook("For Our Best Days", "Min", 2005);		
+		System.out.println(lib); 
+		
+		lib.deleteBook(3);	
+		System.out.println("Delete 3");
+		System.out.println(lib);
+		
+		lib.deleteBook(0);		
+		System.out.println("Delete 0");
+		System.out.println(lib);
+		
+		lib.deleteBook(2);		
+		System.out.println("Delete 2");
+		System.out.println(lib);
+		
+		lib.addBook("New World", "Son", 2012);
+		System.out.println("Add <New World>");
+		System.out.println(lib);
+
+		lib.addBook("My Precious Things", "Park", 2020);
+		System.out.println("Add <My Precious Things>");
+		System.out.println(lib);
+
+	}
+
+}
+
+class Library061 {
+	public final static int MAX_BOOKS = 5; 
+	private int numBooks; 
+	private Book061[] book = new Book061[MAX_BOOKS]; 
+	
+	
+	public Library061 duplicateLibrary(Library061 lib) {
+		
+		Library061 temp = new Library061();
+		
+		int i;
+		for (i=0; )
+		
+	}
+	
+	public Book061 getBook() {
+		
+		
+		
+	}
+	
+	public void addBook(String title, String author, int publishYear) {
+		
+		
+		if(this.book[0]==null) {
+			Book061 subBook = new Book061(title, author, publishYear);	
+			this.book[0] = subBook;
+		} 
+		
+		else {
+			
+			Library061 tempLibrary = new Library(this.);
+			
+			int i;
+			
+			for(i=0; i<this.book.length ;i++) {
+				
+				if(this.book[i].getTitle().compareTo(title) > 0) {
+					
+					Book061 temp = new Book061(book[i]);
+					book[i] = new Book061(title, author, publishYear);
+					
+					int j;
+					for (j = i+1; j<this.book.length; j++) {
+						
+						if (j == i+1) {
+							Book061 temp2 = new Book061(book[j]);
+							book[j] = temp1;
+						}
+						
+						else {
+							
+						}
+						
+						
+						
+					}
+					
+				}
+				
+			}
+		}
+		
+		
+		Book061 subBook = new Book061(title, author, publishYear);	
+		book[i] = subBook;
+	
+	}
+	
+	public void deleteBook(int index) {
+		
+	}
+	
+	public String toString() {
+		
+		String returnString = String.format("[LIBRARY] numBooks(%d)%n",MAX_BOOKS);
+		
+		int i;
+		for(i=0 ; i<book.length; i++) {
+			returnString += String.format("%d: [BOOK] title(%s) author(%s) year(%d)%n",i,book[i].getTitle(), book[i].getAuthor(), book[i].getPublishYear());
+		}
+		return returnString;
+	}
+}
+
+class Book061 {
+  	
+	private String title = "";
+	private String author = "";
+	private int publishYear = 0;
+	
+	public Book061() {
+		this.title = "";
+		this.author = "";
+		this.publishYear = 0;		
+	}
+	
+	public Book061(String title, String author, int publishYear) {
+		
+		this.title = title;
+		this.author = author;
+		this.publishYear = publishYear;
+		
+	}
+	
+	public Book061(Book061 book) {
+		
+		this.title = book.getTitle();
+		this.author = book.getAuthor();
+		this.publishYear = book.getPublishYear();
+		
+	}
+	
+	public String getTitle() {
+		
+		String titleReturn = new String(title);
+		return titleReturn;
+	}
+	
+	public String getAuthor() {
+		
+		String authorReturn = new String(author);
+		return authorReturn;
+	}
+	
+	
+	public int getPublishYear() {
+
+		return publishYear;
+	}
+	
+	
+	
+	
+}

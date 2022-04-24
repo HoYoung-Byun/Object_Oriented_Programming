@@ -1,0 +1,11 @@
+
+public class exercise {
+
+	public static void main(String[] args) {
+		
+		int[] book = new int[5];
+		System.out.println(book[1]);
+
+	}
+
+}
