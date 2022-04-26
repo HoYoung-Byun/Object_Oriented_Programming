@@ -20,43 +20,94 @@ public class Week_4_03 {
 	}
 }
 
-class Splitter43 {
+
+class Splitter43{
 	
-	String delimiter; //private 넣어야함!!
-	String words ; //private 넣어야함!!
+	StringTokenizer tokenizer ;
+	
+	String delimeter;
+	String sentence;
 	
 	public Splitter43() {
 		
-		this.words = "" ;
-		this.delimiter = " " ; //delimeter = null; 이 합당한 것 같다
+		delimeter = " ";
+		sentence = "";
 	}
 	
-	public Splitter43(String words, String delimiter) {
+	public Splitter43(String sentence) {
 		
-		this.words = words ;
-		this.delimiter = delimiter ;
+		delimeter = " ";
+		this.sentence = sentence;
 	}
 	
-	public Splitter43(String words) {
+	public Splitter43(String sentence, String delimeter) {
 		
-		this.words = words ; 
-		this.delimiter = " " ; //this(); 로 축약 가능 
+		this.sentence = sentence;
+		this.delimeter = delimeter;
 		
 	}
 	
 	public void split() {
 		
-		StringTokenizer tokenizer = new StringTokenizer(this.words, this.delimiter) ; //단 코드 개선시 delimeter가 null인경우가 발생하므로 delimeter가 null인 경우 예외처리가 필요하다.
-		String parseWord ;
-		
-		while(tokenizer.hasMoreTokens()) {
+		tokenizer = new StringTokenizer(sentence, delimeter);
+		String temp;
+		while (tokenizer.hasMoreElements()) {
 			
-			parseWord = tokenizer.nextToken();
-			System.out.println(parseWord);
+			temp = tokenizer.nextToken();
+			System.out.println(temp);
 			
 		}
+		
 	}
+	
+	
+	
+	
+	
+	
+	
 }
+
+
+
+
+//class Splitter43 {
+//	
+//	String delimiter; //private 넣어야함!!
+//	String words ; //private 넣어야함!!
+//	
+//	public Splitter43() {
+//		
+//		this.words = "" ;
+//		this.delimiter = " " ; //delimeter = null; 이 합당한 것 같다
+//	}
+//	
+//	public Splitter43(String words, String delimiter) {
+//		
+//		this.words = words ;
+//		this.delimiter = delimiter ;
+//	}
+//	
+//	public Splitter43(String words) {
+//		
+//		this.words = words ; 
+//		this.delimiter = " " ; //this(); 로 축약 가능 
+//		
+//	}
+//	
+//	public void split() {
+//		
+//		StringTokenizer tokenizer = new StringTokenizer(this.words, this.delimiter) ; //단 코드 개선시 delimeter가 null인경우가 발생하므로 delimeter가 null인 경우 예외처리가 필요하다.
+//		String parseWord ;
+//		
+//		while(tokenizer.hasMoreTokens()) {
+//			
+//			parseWord = tokenizer.nextToken();
+//			System.out.println(parseWord);
+//			
+//		}
+//	}
+//}
 
 
 

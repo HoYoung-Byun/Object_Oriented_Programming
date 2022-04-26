@@ -14,7 +14,7 @@ public class Week_5_04 {
 	
 	static void cube(int a) {
 	
-	   Week_5_04.a_prime = Math.pow(a,3) ;
+	   Week_5_04.a_prime = Math.pow(a,3) ; // 지수함수꼴 만드는 방법
 	    
 	}
 

@@ -47,7 +47,7 @@ public class Week_5_02 {
 					else if (word.charAt(i) == '.') {
 						numOfDot++;
 					}
-					else if(word.charAt(i)=='+'|word.charAt(i)=='-') {
+					else if(word.charAt(i)=='+'|| word.charAt(i)=='-') {
 						numOfplusMinus++;
 					}
 					else {
